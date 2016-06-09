@@ -120,8 +120,12 @@ public class ThreadTimer extends JFrame
       setVisible(true);
       
       th1.start(); // 타이머 스레드의 실행을 시작하게 한다.
+	if(th1.isInterrupted() == false) th1.interrupt();
+
       th2.start(); // 타이머 스레드의 실행을 시작하게 한다.
+      	if(th2.isInterrupted() == false) th2.interrupt();
       th3.start(); // 타이머 스레드의 실행을 시작하게 한다.
+        if(th3.isInterrupted() ==false) th3.interrupt();
    }
    
    public static void main(String[] args)
