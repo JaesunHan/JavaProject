@@ -62,7 +62,7 @@ class TimerThreadMin extends Thread {
 	public void run()
 	{  
 		while(p<60){
-			
+			p++;
 			timerLabel.setText(Integer.toString(p)); // 레이블에 카운트 값 출력  
 			try{
 				Thread.sleep(60000);
@@ -70,7 +70,6 @@ class TimerThreadMin extends Thread {
 				return;
 			}
 			if(p==59)p=0;
-			p++;
 		}
 	}
 }
